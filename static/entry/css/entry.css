@@ -82,3 +82,6 @@
     font-size: 1.5em;
   }
 }
+footer {
+  position: static;
+}
