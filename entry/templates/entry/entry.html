@@ -1,23 +1,28 @@
-{% extends "entry/base.html" %}
-{% load staticfiles %}
+{% extends "base.html" %}
 
-{% block body %}
+{% block title %}選課{% endblock %}
+{% block app_name %}選課{% endblock %}
+
+{% load staticfiles %}
+{% block stylesheet %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'entry/css/sidebar.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'entry/css/entry.css' %}">
+{% endblock %}
+
+{% block content %}
 <!-- Page Contents 功能簡介 -->
 <div class="pusher">
     <div class="ui inverted masthead center aligned segment">
-        {% block entryInfo%}
         <div class="ui text container">
-          <h1 class="ui inverted header">
+            <h1 class="ui inverted header">
             選課小幫手
           </h1>
-          <h2>給你精彩的大學生活</h2>
-          <div class="ui huge primary button" ><a href="http://stufinite.faith/course/course_zh_TW" style="color:white">選課 NOW！<i class="right arrow icon"></i></a> </div>
+            <h2>給你精彩的大學生活</h2>
+            <div class="ui huge primary button"><a href="http://stufinite.faith/course/course_zh_TW" style="color:white">選課 NOW！<i class="right arrow icon"></i></a> </div>
         </div>
-        {% endblock %}
-
     </div>
 
-    {% block entryContent %}
     <!-- 這裡放 子網頁連結-->
     <div class="ui grid">
         <div class="two wide column"></div>
@@ -29,8 +34,8 @@
                             <div class="content">
                                 <div class="center" style="font-size: 1.5em;">
                                     <div class="ui inverted clock_black" style="font-size: 1em;line-height:1.5em;color:black;">
-                                         <h2>每次到了選課就頭痛嗎？</h2>
-                                         <h2>用小幫手讓你事半功倍吧</h2>
+                                        <h2>每次到了選課就頭痛嗎？</h2>
+                                        <h2>用小幫手讓你事半功倍吧</h2>
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +202,30 @@
             <img style="visibility:hidden;" class="ui tiny image" src="{% static 'entry/GitHub-52.png' %}">
         </div>
     </div>
-    {% endblock %}
 
 </div>
+{% endblock %}
+
+{% block javascript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js"></script>
+<script src="{% static 'entry/js/pusher.js' %}"></script>
+<script src="{% static 'entry/js/visibility.js' %}"></script>
+<script src="{% static 'entry/js/sidebar.js' %}"></script>
+<script src="{% static 'entry/js/transition.js' %}"></script>
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-78099072-2', 'auto');
+    ga('send', 'pageview');
+</script>
 {% endblock %}
