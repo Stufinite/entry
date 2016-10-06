@@ -1,0 +1,15 @@
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item" href="{% url 'entry:entry' %}">Home</a>
+  <a class="item" href="{% url 'course:course_zh_TW' %}">選課小幫手</a>
+  <a class="item" href="http://feedback.nchusg.org">課程心得版</a>
+  <a class="item" href="{% url 'tiagenda:index' %}">Tiagenda</a>
+  <a class="item" href="{% url 'roll_call:entry' %}">興鮮人</a>
+  <a class="item" href="{% url 'roll_call:dorm' %}">興大宿舍</a>
+  {% if request.user.is_authenticated %}
+    <a class="ui inverted button">HI {{request.user}}</h4>
+    <a class="ui inverted button" href="{% url 'customer:logout' %}">Log out</a>
+  {% else %}
+    <a class="ui inverted button" href="{% url 'customer:login' %}">Log in/Sign Up</a>
+  {% endif %}
+</div>
