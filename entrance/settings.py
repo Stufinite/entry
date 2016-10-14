@@ -49,9 +49,7 @@ INSTALLED_APPS = REQUIRED_APPS + PROJECT_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-
     'django.middleware.common.CommonMiddleware',
-
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -113,12 +111,13 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Settings for our specific uses
+
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 from .settings_database import DATABASE_SETTINGS
 DATABASES = DATABASE_SETTINGS['sqlite']
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
