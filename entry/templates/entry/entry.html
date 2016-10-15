@@ -233,6 +233,9 @@
 $.ajax({
     url: 'http://login.stufinite.faith/auth/get_username',
     dataType: 'text/plaintext',
+    xhrFields: {
+         withCredentials: true
+    },
     success: function(data) {
         console.log(data)
     },
