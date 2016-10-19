@@ -6,7 +6,6 @@
 {% load staticfiles %}
 {% block stylesheet %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="{% static 'entry/css/sidebar.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'entry/css/entry.css' %}">
 {% endblock %}
 
@@ -101,11 +100,11 @@
                     <h2>誠徵 工程師</h2>
                     <p>希望俱備能力：</p>
                     <ul>
-                        <li>後端：Python OR Ruby OR Nodejs</li>
-                        <li>前端：JavaScript OR HTML+CSS OR 有美術才能</li>
+                        <li>後端：Django OR Node.js</li>
+                        <li>前端：JavaScript OR HTML + CSS OR 有美術才能</li>
                     </ul>
-                    <p>主要工作： 會需要寫爬蟲 (使用Ruby + Python)，然後透過Django + JavaScript開發各種web應用 </p>
-                    <p>額外加分：熟悉git工作流程、docker操作、熟悉linux伺服器操作、佈署網站(nginx) </p>
+                    <p>主要工作： 會需要寫爬蟲 (使用Ruby or Python)，然後透過 Django + JavaScript開發各種 Web 應用</p>
+                    <p>額外加分：熟悉 Git 工作流程、熟悉 Linux 伺服器管理</p>
                 </div>
             </div>
             <div class="five wide column">
@@ -209,9 +208,6 @@
 {% block javascript %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js"></script>
 <script src="{% static 'entry/js/pusher.js' %}"></script>
-<script src="{% static 'entry/js/visibility.js' %}"></script>
-<script src="{% static 'entry/js/sidebar.js' %}"></script>
-<script src="{% static 'entry/js/transition.js' %}"></script>
 <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;

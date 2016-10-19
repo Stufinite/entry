@@ -37,12 +37,10 @@
         <div class='stufinite-header-title'>
             <span>{% block app_name %}{% endblock %}小幫手</span>
         </div>
-        {% if search_active %}
         <div class='stufinite-header-search'>
             <input id='search-form' type='text' placeholder='輸入課程名稱、代碼、教師名稱、系所名稱'>
             <button><i class='fa fa-search' aria-hidden='true'></i></button>
         </div>
-        {% endif %}
     </header>
 
     {% block content %}
