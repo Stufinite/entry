@@ -1,0 +1,16 @@
+.stufinite-nav {
+    background-color: #332F2E;
+}
+
+.stufinite-header {
+    background-color: #332F2E;
+}
+
+footer {
+    position: static;
+    background-color: #332F2E;
+}
+
+header {
+    display: none;
+}
