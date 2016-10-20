@@ -9,7 +9,7 @@ u = Userper('login.stufinite.faith')
 @never_cache
 def entry(request):
     stufinite = {}
-    username = u.get_username()
+    username = u.get_username(request.session.session_key)
     if username != 'None':
         stufinite['is_authenticated'] = True
         stufinite['username'] = username
