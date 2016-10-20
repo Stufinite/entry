@@ -1,9 +1,12 @@
 from django.shortcuts import render
 
+from django.views.decorators.cache import never_cache
+
 from userper import Userper
 u = Userper('login.stufinite.faith')
 
 
+@never_cache
 def entry(request):
     stufinite = {}
     username = u.get_username()
